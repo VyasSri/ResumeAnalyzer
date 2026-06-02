@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="190c8a31-8869-4090-883a-c432f8c140a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/welcome/logo-dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/welcome/logo-light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/welcome/welcome.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/ats-bad.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/ats-good.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/ats-warning.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/back.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/cross.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/info.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/pin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/warning.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bg-auth.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bg-main.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bg-small.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/resume-scan-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/resume-scan.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/resume_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/resume_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/resume_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf.worker.min.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="24" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.0573507817652716" />
+      <entry key="MS500" value="5.90879654751985" />
+      <entry key="S2" value="12.814430813834338" />
+      <entry key="S5" value="21.30566119064044" />
+      <entry key="S10" value="31.381852475697613" />
+      <entry key="S30" value="58.22226849041933" />
+      <entry key="S60" value="79.99838449413205" />
+      <entry key="M2" value="102.04686958675171" />
+      <entry key="M5" value="131.43409108601836" />
+      <entry key="M10" value="155.13527162009356" />
+      <entry key="M15" value="167.53912394864219" />
+      <entry key="M30" value="183.67947667667318" />
+      <entry key="H1" value="193.58160670039592" />
+      <entry key="H2" value="199.08530527715857" />
+      <entry key="H4" value="201.98913103064123" />
+      <entry key="D1" value="204.49056519024637" />
+      <entry key="W1" value="204.92703437843483" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.0066927250299025" />
+      <entry key="MS500" value="5.886002779396104" />
+      <entry key="S2" value="12.797723746231702" />
+      <entry key="S5" value="21.261036838254203" />
+      <entry key="S10" value="31.324015525015582" />
+      <entry key="S30" value="58.182358936039684" />
+      <entry key="S60" value="79.97363874257294" />
+      <entry key="M2" value="102.03250944587826" />
+      <entry key="M5" value="131.425556651678" />
+      <entry key="M10" value="155.12885170281763" />
+      <entry key="M15" value="167.5339626786683" />
+      <entry key="M30" value="183.67628459541024" />
+      <entry key="H1" value="193.57981564213404" />
+      <entry key="H2" value="199.0843546133075" />
+      <entry key="H4" value="201.98864103655166" />
+      <entry key="D1" value="204.4904814095099" />
+      <entry key="W1" value="204.92702235690683" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EK4VsMwDXMk3mwl8yP2Wkris9S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\svyas\\WebstormProjects\\ai-resume-analyzer\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\svyas\WebstormProjects\ai-resume-analyzer\public" />
+      <recent name="C:\Users\svyas\WebstormProjects\ai-resume-analyzer" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="190c8a31-8869-4090-883a-c432f8c140a9" name="Changes" comment="" />
+      <created>1779913955277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779913955277</updated>
+      <workItem from="1779913956238" duration="3110000" />
+      <workItem from="1780363510710" duration="304000" />
+      <workItem from="1780363834165" duration="1260000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
