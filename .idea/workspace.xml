@@ -5,44 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="190c8a31-8869-4090-883a-c432f8c140a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/welcome/logo-dark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/welcome/logo-light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/welcome/welcome.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/ats-bad.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/ats-good.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/ats-warning.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/check.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/cross.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/info.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/pin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/warning.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg-auth.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg-main.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg-small.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/pdf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/resume-scan-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/resume-scan.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/resume_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/resume_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/resume_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf.worker.min.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-router.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ResumeCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ScoreCircle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/logo-dark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/logo-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/resume_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/resume_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/resume_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/resume_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/resume_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/resume_3.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,72 +24,91 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="24" />
+    <option name="cachedIndexableFilesCount" value="41" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VyasSri&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VyasSri/ResumeAnalyzer.git&quot;,
+    &quot;accountId&quot;: &quot;28251783-6f64-4292-8e87-dc4d8353a35b&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.0573507817652716" />
-      <entry key="MS500" value="5.90879654751985" />
-      <entry key="S2" value="12.814430813834338" />
-      <entry key="S5" value="21.30566119064044" />
-      <entry key="S10" value="31.381852475697613" />
-      <entry key="S30" value="58.22226849041933" />
-      <entry key="S60" value="79.99838449413205" />
-      <entry key="M2" value="102.04686958675171" />
-      <entry key="M5" value="131.43409108601836" />
-      <entry key="M10" value="155.13527162009356" />
-      <entry key="M15" value="167.53912394864219" />
-      <entry key="M30" value="183.67947667667318" />
-      <entry key="H1" value="193.58160670039592" />
-      <entry key="H2" value="199.08530527715857" />
-      <entry key="H4" value="201.98913103064123" />
-      <entry key="D1" value="204.49056519024637" />
-      <entry key="W1" value="204.92703437843483" />
+      <entry key="MS100" value="1.0000601948672176" />
+      <entry key="MS500" value="1.1431897372475106" />
+      <entry key="S2" value="1.615785018045046" />
+      <entry key="S5" value="1.942099079825717" />
+      <entry key="S10" value="2.8561729341987014" />
+      <entry key="S30" value="8.354719122321743" />
+      <entry key="S60" value="16.501700140732726" />
+      <entry key="M2" value="30.166472616400927" />
+      <entry key="M5" value="59.76027469628901" />
+      <entry key="M10" value="89.18751525233809" />
+      <entry key="M15" value="108.99000812226572" />
+      <entry key="M30" value="145.20212181930287" />
+      <entry key="H1" value="176.9476578718222" />
+      <entry key="H2" value="199.25034738931467" />
+      <entry key="H4" value="223.52590981090506" />
+      <entry key="D1" value="489.70870838771253" />
+      <entry key="W1" value="681.782552021946" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="6.774575115556299E-26" />
+      <entry key="MS500" value="9.250738670820135E-6" />
+      <entry key="S2" value="0.055149820484382515" />
+      <entry key="S5" value="0.31377449642394073" />
+      <entry key="S10" value="0.5601558324550041" />
+      <entry key="S30" value="0.8292732460045342" />
+      <entry key="S60" value="1.043127864742898" />
+      <entry key="M2" value="1.8025144657801508" />
+      <entry key="M5" value="3.753434609706935" />
+      <entry key="M10" value="5.3560825034194055" />
+      <entry key="M15" value="6.324133191705999" />
+      <entry key="M30" value="8.154942418365945" />
+      <entry key="H1" value="9.920712314434173" />
+      <entry key="H2" value="11.236432387809176" />
+      <entry key="H4" value="12.075308947084565" />
+      <entry key="D1" value="13.367303892259562" />
+      <entry key="W1" value="13.890356427657794" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.0066927250299025" />
-      <entry key="MS500" value="5.886002779396104" />
-      <entry key="S2" value="12.797723746231702" />
-      <entry key="S5" value="21.261036838254203" />
-      <entry key="S10" value="31.324015525015582" />
-      <entry key="S30" value="58.182358936039684" />
-      <entry key="S60" value="79.97363874257294" />
-      <entry key="M2" value="102.03250944587826" />
-      <entry key="M5" value="131.425556651678" />
-      <entry key="M10" value="155.12885170281763" />
-      <entry key="M15" value="167.5339626786683" />
-      <entry key="M30" value="183.67628459541024" />
-      <entry key="H1" value="193.57981564213404" />
-      <entry key="H2" value="199.0843546133075" />
-      <entry key="H4" value="201.98864103655166" />
-      <entry key="D1" value="204.4904814095099" />
-      <entry key="W1" value="204.92702235690683" />
+      <entry key="MS100" value="0.006222972665341892" />
+      <entry key="MS500" value="0.45724570254362534" />
+      <entry key="S2" value="1.3696186998756121" />
+      <entry key="S5" value="2.057829898444069" />
+      <entry key="S10" value="3.2087347080393105" />
+      <entry key="S30" value="8.928354614847727" />
+      <entry key="S60" value="17.29411963651558" />
+      <entry key="M2" value="31.747957779294637" />
+      <entry key="M5" value="63.354929957398376" />
+      <entry key="M10" value="94.43424238844588" />
+      <entry key="M15" value="115.22823451192261" />
+      <entry key="M30" value="153.30213793853025" />
+      <entry key="H1" value="186.83560588274085" />
+      <entry key="H2" value="210.46854691925475" />
+      <entry key="H4" value="235.5915060479003" />
+      <entry key="D1" value="503.0741419136113" />
+      <entry key="W1" value="695.6726213926635" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -145,7 +138,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "editing.templates",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Users\\svyas\\WebstormProjects\\ai-resume-analyzer\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -173,7 +166,8 @@
       <updated>1779913955277</updated>
       <workItem from="1779913956238" duration="3110000" />
       <workItem from="1780363510710" duration="304000" />
-      <workItem from="1780363834165" duration="1260000" />
+      <workItem from="1780363834165" duration="2987000" />
+      <workItem from="1780439661827" duration="4892000" />
     </task>
     <servers />
   </component>
