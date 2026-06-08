@@ -70,37 +70,6 @@ npm run dev
 ```
 
 ---
-
-## Deployment
-
-This is a fully static SPA — no server required. Build output goes to `build/client/`.
-
-```bash
-npm run build
-```
-
-### Vercel (recommended — auto-deploys from GitHub)
-
-1. Push your repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → **New Project** → import your GitHub repo
-3. Vercel auto-detects the framework. Set **Output Directory** to `build/client` if it doesn't detect it
-4. Click **Deploy** — done. Every push to `main` redeploys automatically
-5. Your live URL will be `https://your-project.vercel.app`
-
-### Netlify
-
-1. Push your repo to GitHub
-2. Go to [netlify.com](https://netlify.com) → **Add new site** → **Import from Git**
-3. The `netlify.toml` in this repo handles build command and publish directory automatically
-4. Click **Deploy site** — your URL will be `https://your-project.netlify.app`
-
-### Puter App Center
-
-1. Run `npm run build`
-2. Go to [puter.com](https://puter.com), open the App Center
-3. Upload the contents of `build/client/` as a new app
-4. Your app runs natively inside the Puter environment with zero config
-
 ---
 
 ## Project Structure
