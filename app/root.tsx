@@ -53,7 +53,9 @@ export function Layout({ children }: { children : React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <Navbar />
+      <div className="sticky top-0 z-50 px-4 pt-3 pb-2">
+        <Navbar />
+      </div>
       <Outlet />
     </>
   );

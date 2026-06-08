@@ -41,15 +41,16 @@ export default function ResumePage() {
 
     if (loadingData) {
         return (
-            <main className="min-h-screen flex items-center justify-center">
-                <img src="/images/resume-scan.gif" alt="loading" className="w-64" />
+            <main className="min-h-screen flex flex-col items-center justify-center gap-4 bg-gradient">
+                <img src="/images/resume-scan.gif" alt="loading" className="w-52 opacity-80" />
+                <p className="text-gray-400 text-sm animate-pulse">Loading your resume review...</p>
             </main>
         );
     }
 
     if (!resume) {
         return (
-            <main className="min-h-screen flex flex-col items-center justify-center gap-4">
+            <main className="min-h-screen flex flex-col items-center justify-center gap-4 bg-gradient">
                 <p className="text-gray-500">Resume not found.</p>
                 <Link to="/" className="primary-button w-fit">Go Home</Link>
             </main>
@@ -57,43 +58,66 @@ export default function ResumePage() {
     }
 
     return (
-        <main className="min-h-screen flex flex-col">
+        <main className="min-h-screen flex flex-col bg-white">
+            {/* Sub-nav */}
             <div className="resume-nav">
                 <Link to="/" className="back-button">
-                    <img src="/icons/back.svg" alt="back" className="w-4 h-4" />
-                    <span className="text-sm">Back</span>
+                    <img src="/icons/back.svg" alt="back" className="w-4 h-4 opacity-60" />
+                    <span>Back</span>
                 </Link>
                 <div className="flex flex-col items-end">
-                    <p className="font-semibold">{resume.companyName}</p>
-                    <p className="text-gray-500 text-sm">{resume.jobTitle}</p>
+                    <p className="font-semibold text-gray-900">{resume.companyName}</p>
+                    <p className="text-gray-400 text-xs">{resume.jobTitle}</p>
                 </div>
             </div>
 
-            <div className="flex flex-col-reverse lg:flex-row flex-1">
-                {/* Left — resume image */}
-                <div className="lg:w-1/2 bg-gradient sticky top-0 lg:h-screen flex items-start justify-center p-6 overflow-auto">
+            <div className="flex flex-col-reverse lg:flex-row flex-1 min-h-0">
+                {/* Left — resume preview */}
+                <div className="lg:w-1/2 bg-gradient sticky top-[57px] lg:h-[calc(100vh-57px)] flex items-start justify-center p-8 overflow-auto border-r border-gray-100">
                     {imageUrl ? (
-                        <a href={resumeUrl} target="_blank" rel="noreferrer">
-                            <img src={imageUrl} alt="resume preview" className="rounded-xl shadow-lg max-w-full" />
+                        <a href={resumeUrl} target="_blank" rel="noreferrer" className="group relative block">
+                            <img
+                                src={imageUrl}
+                                alt="resume preview"
+                                className="rounded-2xl shadow-2xl max-w-full group-hover:shadow-indigo-200/60 transition-shadow duration-300"
+                            />
+                            <div className="absolute inset-0 rounded-2xl bg-indigo-600/0 group-hover:bg-indigo-600/5 transition-colors duration-300 flex items-center justify-center">
+                                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white/90 backdrop-blur-sm text-indigo-600 text-sm font-semibold px-4 py-2 rounded-full shadow-lg">
+                                    Open PDF ↗
+                                </span>
+                            </div>
                         </a>
                     ) : (
-                        <img src="/images/resume-scan-2.gif" alt="loading" className="w-48" />
+                        <div className="flex flex-col items-center gap-4">
+                            <img src="/images/resume-scan-2.gif" alt="loading" className="w-40 opacity-60" />
+                            <p className="text-gray-400 text-sm animate-pulse">Loading preview...</p>
+                        </div>
                     )}
                 </div>
 
                 {/* Right — feedback */}
-                <div className="feedback-section">
-                    <h2 className="!text-black font-bold">Resume Review</h2>
+                <div className="feedback-section max-lg:border-b border-gray-100">
+                    <div className="flex items-center justify-between mb-2">
+                        <h2 className="!text-gray-900 font-bold text-2xl">Resume Review</h2>
+                        {resume.feedback?.overallScore !== undefined && (
+                            <div className="flex items-center gap-2 bg-indigo-50 border border-indigo-100 rounded-xl px-4 py-2">
+                                <span className="text-xs text-indigo-500 font-medium">Overall</span>
+                                <span className="text-2xl font-black text-indigo-600">{resume.feedback.overallScore}</span>
+                                <span className="text-xs text-indigo-400">/100</span>
+                            </div>
+                        )}
+                    </div>
+
                     {resume.feedback?.overallScore !== undefined ? (
-                        <div className="flex flex-col gap-8">
+                        <div className="flex flex-col gap-6 animate-in fade-in duration-500">
                             <Summary feedback={resume.feedback} />
                             <ATS score={resume.feedback.ats.score} tips={resume.feedback.ats.tips} />
                             <Details feedback={resume.feedback} />
                         </div>
                     ) : (
-                        <div className="flex flex-col items-center gap-4 mt-8">
-                            <p className="text-gray-500">Analysis in progress...</p>
-                            <img src="/images/resume-scan.gif" alt="scanning" className="w-48" />
+                        <div className="flex flex-col items-center gap-4 py-12">
+                            <img src="/images/resume-scan.gif" alt="scanning" className="w-40 opacity-80" />
+                            <p className="text-gray-400 text-sm animate-pulse">Analysis in progress...</p>
                         </div>
                     )}
                 </div>

@@ -5,47 +5,54 @@ import { useNavigate } from "react-router";
 import { generateUUID } from "~/lib/utils";
 import { prepareInstructions } from "../../constants";
 
+const steps = [
+    { label: "Uploading resume" },
+    { label: "Converting to image" },
+    { label: "Uploading image" },
+    { label: "Saving data" },
+    { label: "Running AI analysis" },
+    { label: "Done" },
+];
+
 const Upload = () => {
     const [isProcessing, setIsProcessing] = useState(false);
+    const [currentStep, setCurrentStep] = useState(-1);
     const [statusText, setStatusText] = useState("");
     const [file, setFile] = useState<File | null>(null);
     const { fs, kv, ai } = usePuterStore();
     const navigate = useNavigate();
 
-    const handleAnalyze = async ({
-        companyName, jobTitle, jobDescription, file,
-    }: {
+    const step = (i: number, text: string) => { setCurrentStep(i); setStatusText(text); };
+
+    const handleAnalyze = async ({ companyName, jobTitle, jobDescription, file }: {
         companyName: string; jobTitle: string; jobDescription: string; file: File;
     }) => {
         setIsProcessing(true);
 
-        setStatusText("Uploading resume...");
+        step(0, "Uploading resume...");
         const uploadedFile = await fs.upload([file]);
         if (!uploadedFile) { setStatusText("❌ Failed to upload file."); return; }
 
-        setStatusText("Converting to image...");
+        step(1, "Converting PDF to image...");
         const { convertPdfToImage } = await import("~/lib/pdf-to-image");
         const imageFile = await convertPdfToImage(file);
         if (!imageFile) { setStatusText("❌ Failed to convert PDF to image."); return; }
 
-        setStatusText("Uploading image...");
+        step(2, "Uploading image...");
         const uploadedImage = await fs.upload([imageFile]);
         if (!uploadedImage) { setStatusText("❌ Failed to upload image."); return; }
 
-        setStatusText("Preparing data...");
+        step(3, "Saving your data...");
         const uuid = generateUUID();
         const data: Resume = {
-            id: uuid,
-            companyName,
-            jobTitle,
-            jobDescription,
+            id: uuid, companyName, jobTitle, jobDescription,
             resumePath: uploadedFile.path,
             imagePath: uploadedImage.path,
             feedback: {} as Feedback,
         };
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
 
-        setStatusText("Analyzing with AI...");
+        step(4, "Analyzing with AI — this may take a moment...");
         const instructions = prepareInstructions(jobTitle, jobDescription);
         const response = await ai.feedback(uploadedFile.path, instructions);
         if (!response) { setStatusText("❌ AI analysis failed."); return; }
@@ -57,8 +64,8 @@ const Upload = () => {
         data.feedback = JSON.parse(rawText);
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
 
-        setStatusText("✅ Analysis complete! Redirecting...");
-        navigate(`/resume/${uuid}`);
+        step(5, "Analysis complete!");
+        setTimeout(() => navigate(`/resume/${uuid}`), 600);
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -73,42 +80,67 @@ const Upload = () => {
     };
 
     return (
-        <main className="bg-[url('/images/bg-main.svg')] bg-cover">
-            <section className="main-section">
-                <div className="page-heading py-16">
-                    <h1>Smart feedback for your dream internship</h1>
-                    {isProcessing ? (
-                        <div className="flex flex-col items-center gap-4 mt-8">
-                            <h2 className="text-xl font-semibold text-gray-700">{statusText}</h2>
-                            <img src="/images/resume-scan.gif" className="w-full max-w-md" alt="scanning" />
+        <main className="min-h-screen bg-gradient">
+            <div className="absolute top-32 right-1/4 w-72 h-72 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
+
+            <section className="main-section relative">
+                <div className="page-heading pt-10 pb-2 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <h1>Analyze Your Resume</h1>
+                    <h2>Get an ATS score and expert AI feedback in seconds</h2>
+                </div>
+
+                {isProcessing ? (
+                    <div className="glass-card p-10 w-full max-w-lg animate-in fade-in duration-300">
+                        <div className="flex flex-col items-center gap-6">
+                            <img src="/images/resume-scan.gif" className="w-48 opacity-90" alt="scanning" />
+                            <div className="w-full flex flex-col gap-3">
+                                {steps.map((s, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                                            i < currentStep ? "bg-green-500" :
+                                            i === currentStep ? "primary-gradient animate-pulse" :
+                                            "bg-gray-100"
+                                        }`}>
+                                            {i < currentStep && <img src="/icons/check.svg" alt="" className="w-3 h-3 brightness-0 invert" />}
+                                        </div>
+                                        <span className={`text-sm transition-all duration-300 ${
+                                            i === currentStep ? "font-semibold text-gray-900" :
+                                            i < currentStep ? "text-gray-400 line-through" :
+                                            "text-gray-300"
+                                        }`}>{s.label}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-xs text-gray-400 text-center">{statusText}</p>
                         </div>
-                    ) : (
-                        <>
-                            <h2>Drop your resume for your ATS score and tips to improve</h2>
-                            <form id="upload-form" onSubmit={handleSubmit} className="flex flex-col gap-4 mt-8">
+                    </div>
+                ) : (
+                    <div className="glass-card p-8 w-full max-w-2xl animate-in fade-in duration-300">
+                        <form id="upload-form" onSubmit={handleSubmit}>
+                            <div className="grid grid-cols-2 gap-4 w-full max-sm:grid-cols-1">
                                 <div className="form-div">
                                     <label htmlFor="company-name">Company Name</label>
-                                    <input type="text" name="company-name" placeholder="Company Name" id="company-name" />
+                                    <input type="text" name="company-name" placeholder="e.g. Google" id="company-name" required />
                                 </div>
                                 <div className="form-div">
                                     <label htmlFor="job-title">Job Title</label>
-                                    <input type="text" name="job-title" placeholder="Job Title" id="job-title" />
+                                    <input type="text" name="job-title" placeholder="e.g. Software Engineer" id="job-title" required />
                                 </div>
-                                <div className="form-div">
-                                    <label htmlFor="job-description">Job Description</label>
-                                    <textarea rows={5} name="job-description" placeholder="Job Description" id="job-description" />
-                                </div>
-                                <div className="form-div">
-                                    <label htmlFor="uploader">Upload Resume</label>
-                                    <FileUploader onFileSelect={(f) => setFile(f)} />
-                                </div>
-                                <button type="submit" className="primary-button w-fit" disabled={!file}>
-                                    Analyze Resume
-                                </button>
-                            </form>
-                        </>
-                    )}
-                </div>
+                            </div>
+                            <div className="form-div w-full">
+                                <label htmlFor="job-description">Job Description <span className="text-gray-400 font-normal">(optional but improves accuracy)</span></label>
+                                <textarea rows={4} name="job-description" placeholder="Paste the job description here..." id="job-description" />
+                            </div>
+                            <div className="form-div w-full">
+                                <label>Resume PDF</label>
+                                <FileUploader onFileSelect={(f) => setFile(f)} />
+                            </div>
+                            <button type="submit" className="primary-button w-fit px-8 py-3 text-base" disabled={!file}>
+                                Analyze Resume →
+                            </button>
+                        </form>
+                    </div>
+                )}
             </section>
         </main>
     );
