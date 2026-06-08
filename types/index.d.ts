@@ -30,3 +30,27 @@ interface KVItem {
     key: string;
     value: string;
 }
+
+type ApplicationStatus =
+    | "Saved"
+    | "Applied"
+    | "Phone Screen"
+    | "Interview"
+    | "Offer"
+    | "Rejected"
+    | "Withdrawn";
+
+interface JobApplication {
+    id: string;
+    companyName: string;
+    jobTitle: string;
+    jobUrl?: string;
+    salary?: string;
+    location?: string;
+    jobDescription?: string;
+    applicationDate: string;
+    status: ApplicationStatus;
+    notes?: string;
+    nextStep?: string;
+    resumeId?: string;
+}

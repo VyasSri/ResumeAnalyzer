@@ -791,4 +791,6 @@ List all entries: `kv.list("job:*")` returns `KVItem[]`. Parse each with `JSON.p
 - Do not create a backend — all storage is via Puter KV
 - Do not break existing resume review routes or components
 - Do not add new global CSS — use existing utility classes and Tailwind only
+
+
  
