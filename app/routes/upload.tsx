@@ -1,4 +1,3 @@
-import Navbar from "~/components/Navbar";
 import { useState } from "react";
 import FileUploader from "~/components/FileUploader";
 import { usePuterStore } from "~/lib/puter";
@@ -75,7 +74,6 @@ const Upload = () => {
 
     return (
         <main className="bg-[url('/images/bg-main.svg')] bg-cover">
-            <Navbar />
             <section className="main-section">
                 <div className="page-heading py-16">
                     <h1>Smart feedback for your dream internship</h1>

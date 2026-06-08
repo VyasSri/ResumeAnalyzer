@@ -1,58 +1,32 @@
-interface Job {
-    title: string;
-    description: string;
-    location: string;
-    requiredSkills: string[];
-}
-
 interface Resume {
     id: string;
-    companyName?: string;
-    jobTitle?: string;
-    imagePath: string;
+    companyName: string;
+    jobTitle: string;
+    jobDescription: string;
     resumePath: string;
+    imagePath: string;
     feedback: Feedback;
 }
 
 interface Feedback {
     overallScore: number;
-    ATS: {
+    ats: {
         score: number;
-        tips: {
-            type: "good" | "improve";
-            tip: string;
-        }[];
+        tips: string[];
     };
-    toneAndStyle: {
-        score: number;
-        tips: {
-            type: "good" | "improve";
-            tip: string;
-            explanation: string;
-        }[];
+    toneAndStyle: number;
+    content: number;
+    structure: number;
+    skills: number;
+    sections: {
+        toneAndStyle: { score: number; what_is_good: string[]; what_to_improve: string[] };
+        content:      { score: number; what_is_good: string[]; what_to_improve: string[] };
+        structure:    { score: number; what_is_good: string[]; what_to_improve: string[] };
+        skills:       { score: number; what_is_good: string[]; what_to_improve: string[] };
     };
-    content: {
-        score: number;
-        tips: {
-            type: "good" | "improve";
-            tip: string;
-            explanation: string;
-        }[];
-    };
-    structure: {
-        score: number;
-        tips: {
-            type: "good" | "improve";
-            tip: string;
-            explanation: string;
-        }[];
-    };
-    skills: {
-        score: number;
-        tips: {
-            type: "good" | "improve";
-            tip: string;
-            explanation: string;
-        }[];
-    };
+}
+
+interface KVItem {
+    key: string;
+    value: string;
 }

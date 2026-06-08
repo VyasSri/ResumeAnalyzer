@@ -58,7 +58,7 @@ export default function ResumePage() {
 
     return (
         <main className="min-h-screen flex flex-col">
-            <nav className="resume-nav">
+            <div className="resume-nav">
                 <Link to="/" className="back-button">
                     <img src="/icons/back.svg" alt="back" className="w-4 h-4" />
                     <span className="text-sm">Back</span>
@@ -67,7 +67,7 @@ export default function ResumePage() {
                     <p className="font-semibold">{resume.companyName}</p>
                     <p className="text-gray-500 text-sm">{resume.jobTitle}</p>
                 </div>
-            </nav>
+            </div>
 
             <div className="flex flex-col-reverse lg:flex-row flex-1">
                 {/* Left — resume image */}

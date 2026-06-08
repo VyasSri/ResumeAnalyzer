@@ -8,11 +8,11 @@ export default function Wipe() {
 
     const handleWipe = async () => {
         setRunning(true);
-        const items = (await kv.list("resume:*")) as KVItem[];
+        const items = ((await kv.list("resume:*")) ?? []) as string[];
         const keys: string[] = [];
-        for (const item of items ?? []) {
-            await kv.delete(item.key);
-            keys.push(item.key);
+        for (const key of items) {
+            await kv.delete(key);
+            keys.push(key);
         }
         setDeleted(keys);
         setRunning(false);
