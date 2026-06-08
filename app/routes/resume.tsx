@@ -99,11 +99,16 @@ export default function ResumePage() {
                 <div className="feedback-section max-lg:border-b border-gray-100">
                     <div className="flex items-center justify-between mb-2">
                         <h2 className="!text-gray-900 font-bold text-2xl">Resume Review</h2>
-                        {resume.feedback?.overallScore !== undefined && (
-                            <div className="flex items-center gap-2 bg-indigo-50 border border-indigo-100 rounded-xl px-4 py-2">
-                                <span className="text-xs text-indigo-500 font-medium">Overall</span>
-                                <span className="text-2xl font-black text-indigo-600">{resume.feedback.overallScore}</span>
-                                <span className="text-xs text-indigo-400">/100</span>
+                        {resume.feedback?.overallScore !== undefined && id && (
+                            <div className="flex items-center gap-3">
+                                <Link to={`/resume/${id}/copilot`} className="primary-button w-fit">
+                                    ✦ Launch AI Co-Pilot
+                                </Link>
+                                <div className="flex items-center gap-2 bg-indigo-50 border border-indigo-100 rounded-xl px-4 py-2">
+                                    <span className="text-xs text-indigo-500 font-medium">Overall</span>
+                                    <span className="text-2xl font-black text-indigo-600">{resume.feedback.overallScore}</span>
+                                    <span className="text-xs text-indigo-400">/100</span>
+                                </div>
                             </div>
                         )}
                     </div>
